@@ -44,7 +44,8 @@ func main() {
 			if err != nil {
 				log.Fatal(err)
 			}
-			if strings.TrimSpace(ans) == v[1] {
+			cleanAns := strings.ToLower(strings.TrimSpace(ans))
+			if cleanAns == v[1] {
 				total_correct++
 			}
 			total++
