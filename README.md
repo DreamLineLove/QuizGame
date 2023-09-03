@@ -15,8 +15,10 @@ A program written in Go for running timed quizes via the command line.
 - Run the binary or build it yourself (<a href="https://go.dev/learn/" target="_blank">Go toolchain required</a>):
 
 ```go
+    // This will run the binary with default flags
     $ ./QuizGame
-    // Or
+
+    // Or build the binary yourself
     $ go build .
 ```
 
