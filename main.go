@@ -11,7 +11,8 @@ import (
 )
 
 var csvName string
-var answers []string
+var total int
+var total_correct int
 
 func main() {
 	flag.StringVar(&csvName, "filename", "problems.csv", "Give the name of the csv file.")
@@ -36,10 +37,12 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		answers = append(answers, strings.TrimSpace(ans))
+		if strings.TrimSpace(ans) == v[1] {
+			total_correct++
+		}
+		total++
 		bufioRd.Reset(os.Stdin)
 	}
 
-	fmt.Println()
-	fmt.Println(answers)
+	fmt.Printf("\n\nTotal: %d\nCorrect: %d\n", total, total_correct)
 }
