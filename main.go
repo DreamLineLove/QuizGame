@@ -6,6 +6,7 @@ import (
 	"flag"
 	"fmt"
 	"log"
+	"math/rand"
 	"os"
 	"strings"
 	"time"
@@ -16,6 +17,14 @@ var timelimit int
 var total int
 var total_correct int
 var ch chan bool
+
+func shuffle(questions [][]string) {
+	n := len(questions)
+	for i := n - 1; i > 0; i-- {
+		j := rand.Intn(i + 1)
+		questions[i], questions[j] = questions[j], questions[i]
+	}
+}
 
 func main() {
 	flag.StringVar(&csvName, "filename", "problems.csv", `Give the name of the csv file. Defaults to "problems.csv".`)
@@ -33,6 +42,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	shuffle(questions)
 
 	ch = make(chan bool)
 
