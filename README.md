@@ -14,8 +14,13 @@ A program written in Go for running timed quizes via the command line.
 
 - Run the binary or build it yourself (<a href="https://go.dev/learn/" target="_blank">Go toolchain required</a>):
 
-```
+```go
     $ ./QuizGame
     // Or
     $ go build .
+```
+
+- By default -timelimit is 30 (seconds) and -filename is "problems.csv". However, you can set the flags anyway you like as such:
+```go
+    $ ./QuizGame -timelimit 60 -filename mydata.csv
 ```
