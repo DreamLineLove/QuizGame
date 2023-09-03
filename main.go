@@ -15,6 +15,7 @@ var csvName string
 var timelimit int
 var total int
 var total_correct int
+var ch chan bool
 
 func main() {
 	flag.StringVar(&csvName, "filename", "problems.csv", `Give the name of the csv file. Defaults to "problems.csv".`)
@@ -33,7 +34,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	ch := make(chan bool)
+	ch = make(chan bool)
 
 	go func() {
 		bufioRd := bufio.NewReader(os.Stdin)
@@ -54,7 +55,7 @@ func main() {
 
 	select {
 	case <-ch:
-		fmt.Printf("\n\nTotal: %d\nCorrect: %d\n", total, total_correct)
+		fmt.Printf("\nTotal: %d\nCorrect: %d\n", total, total_correct)
 	case <-time.After(time.Second * time.Duration(timelimit)):
 		fmt.Print("\n\nTime ran out!\n")
 	}
