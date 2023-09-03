@@ -49,8 +49,9 @@ func main() {
 	go func() {
 		bufioRd := bufio.NewReader(os.Stdin)
 		for i, v := range questions {
-			fmt.Print(i+1, ". ", v[0], "\n")
+			fmt.Print(i+1, ". ", v[0], " = ")
 			ans, err := bufioRd.ReadString('\n')
+			fmt.Println()
 			if err != nil {
 				log.Fatal(err)
 			}
