@@ -12,7 +12,7 @@ A program written in Go for running timed quizes via the command line.
     $ git clone https://github.com/DreamLineLove/QuizGame.git
 ```
 
-- Run the binary or build it yourself <a href="https://go.dev/learn/" target="_blank">Go toolchain required</a>:
+- Run the binary or build it yourself (<a href="https://go.dev/learn/" target="_blank">Go toolchain required</a>):
 
 ```
     $ ./QuizGame
