@@ -22,7 +22,11 @@ A program written in Go for running timed quizes via the command line.
     $ go build .
 ```
 
-- By default -timelimit is 30 (seconds) and -filename is "problems.csv". However, you can set the flags anyway you like as such:
+## Flags
+- By default -timelimit is 30 (seconds) and -filename is "problems.csv".
+- However, you can set the flags anyway you like:
 ```go
+    // The time limit is 60 seconds and the data source is
+    // set as "mydata.csv" from the same directory
     $ ./QuizGame -timelimit 60 -filename mydata.csv
 ```
