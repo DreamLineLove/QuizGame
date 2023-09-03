@@ -1,11 +1,13 @@
 package main
 
 import (
+	"bufio"
 	"encoding/csv"
 	"flag"
 	"fmt"
 	"log"
 	"os"
+	"strings"
 )
 
 var csvName string
@@ -27,7 +29,17 @@ func main() {
 		log.Fatal(err)
 	}
 
+	bufioRd := bufio.NewReader(os.Stdin)
 	for i, v := range questions {
 		fmt.Print(i+1, ". ", v[0], "\n")
+		ans, err := bufioRd.ReadString('\n')
+		if err != nil {
+			log.Fatal(err)
+		}
+		answers = append(answers, strings.TrimSpace(ans))
+		bufioRd.Reset(os.Stdin)
 	}
+
+	fmt.Println()
+	fmt.Println(answers)
 }
