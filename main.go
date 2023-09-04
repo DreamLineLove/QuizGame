@@ -35,6 +35,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	defer csvFile.Close()
 
 	rd := csv.NewReader(csvFile)
 
