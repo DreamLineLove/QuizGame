@@ -30,3 +30,8 @@ A program written in Go for running timed quizes via the command line.
     // set as "mydata.csv" from the same directory
     $ ./QuizGame -timelimit 60 -filename mydata.csv
 ```
+
+## To Add
+- Tracking time for each question
+- Turn-based 2 player mode
+- Simultaneous 2 player mode
