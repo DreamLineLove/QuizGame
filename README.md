@@ -16,18 +16,20 @@ A program written in Go for running timed quizes via the command line.
 
 ```go
     // This will run the binary with default flags
-    $ ./linux/QuizGame
-    $ ./mac/QuizGame
+    $ ./bin/mac-apple-silicon
+    $ ./bin/mac-intel
+    $ ./bin/windows
+    $ ./bin/linux
 
     // Or build the binary for your operating system
     $ go build .
 ```
 
 ## Flags
-- By default -timelimit is 30 (seconds) and -filename is "problems.csv".
+- By default -timelimit is 30 (seconds) and -path is "./problems.csv".
 - However, you can set the flags anyway you like:
 ```go
     // The time limit is 60 seconds and the data source is set as
-    // "mydata.csv" file from the directory the command was run
+    // "mydata.csv" file from the directory at which the command was run
     $ ./QuizGame -timelimit 60 -filename mydata.csv
 ```
