@@ -16,8 +16,8 @@ A program written in Go for running timed quizes via the command line.
 
 ```go
     // This will run the binary with default flags
-    $ ./bin/mac-apple-silicon
-    $ ./bin/mac-intel
+    $ ./bin/apple-silicon-mac
+    $ ./bin/intel-mac
     $ ./bin/windows
     $ ./bin/linux
 
@@ -30,6 +30,6 @@ A program written in Go for running timed quizes via the command line.
 - However, you can set the flags anyway you like:
 ```go
     // The time limit is 60 seconds and the data source is set as
-    // "mydata.csv" file from the directory at which the command was run
-    $ ./QuizGame -timelimit 60 -path mydata.csv
+    // "another.csv" file from the directory at which the command was run
+    $ ./QuizGame -timelimit 60 -path another.csv
 ```
