@@ -15,13 +15,14 @@ A program written in Go for running timed quizes via the command line.
 - Run the binary or build it yourself (<a href="https://go.dev/learn/" target="_blank">Go toolchain required</a>):
 
 ```go
-    // This will run the binary with default flags
+    // The following will run the binary with default flags
+    // Run the one for your operating system
     $ ./bin/apple-silicon-mac
     $ ./bin/intel-mac
     $ ./bin/windows
     $ ./bin/linux
 
-    // Or build the binary for your operating system
+    // Or build the binary yourself for your operating system
     $ go build .
 ```
 
