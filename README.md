@@ -15,14 +15,14 @@ A program written in Go for running timed quizes via the command line.
 - Run the binary or build it yourself (<a href="https://go.dev/learn/" target="_blank">Go toolchain required</a>):
 
 ```go
-    // The following will run the binary with default flags
+    // The following each runs the binary with default flags
     // Run the one for your operating system
     $ ./bin/apple-silicon-mac
     $ ./bin/intel-mac
     $ ./bin/windows
     $ ./bin/linux
 
-    // Or build the binary yourself for your operating system
+    // Or build the binary yourself
     $ go build .
 ```
 
@@ -32,5 +32,6 @@ A program written in Go for running timed quizes via the command line.
 ```go
     // The time limit is 60 seconds and the data source is set as
     // "another.csv" file from the directory at which the command was run
-    $ ./QuizGame -timelimit 60 -path another.csv
+    // It is run on an Apple Silicon mac (M-series chips)
+    $ ./bin/apple-silicon-mac -timelimit 60 -path another.csv
 ```
