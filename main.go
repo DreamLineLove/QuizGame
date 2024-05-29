@@ -27,8 +27,8 @@ func shuffle(questions [][]string) {
 }
 
 func main() {
-	flag.StringVar(&csvName, "filename", "problems.csv", `Give the name of the csv file.`)
-	flag.IntVar(&timelimit, "timelimit", 30, "Give the time limit in seconds for the whole quiz.")
+	flag.StringVar(&csvName, "path", "problems.csv", `Relative path to the csv quiz file`)
+	flag.IntVar(&timelimit, "timelimit", 30, "Time limit in seconds for the quiz")
 	flag.Parse()
 
 	csvFile, err := os.Open(csvName)
