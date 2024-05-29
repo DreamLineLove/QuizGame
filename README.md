@@ -31,5 +31,5 @@ A program written in Go for running timed quizes via the command line.
 ```go
     // The time limit is 60 seconds and the data source is set as
     // "mydata.csv" file from the directory at which the command was run
-    $ ./QuizGame -timelimit 60 -filename mydata.csv
+    $ ./QuizGame -timelimit 60 -path mydata.csv
 ```
