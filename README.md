@@ -31,7 +31,7 @@ A program written in Go for running timed quizes via the command line.
 - However, you can set the flags to anything you like:
 ```go
     // Here, the time limit is 60 seconds and the file path
-    // is set as "another.csv" from the same directory.
-    // It will be run on an M-series CPU mac (M1, M2, chips)
+    // is set as "another.csv" from the same directory. It
+    // will be run on Apple Silicon macs (with M1 M2 chips)
     $ ./bin/apple-silicon-mac -timelimit 60 -path another.csv
 ```
