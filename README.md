@@ -28,10 +28,10 @@ A program written in Go for running timed quizes via the command line.
 
 ## Flags
 - By default -timelimit is 30 (seconds) and -path is "./problems.csv".
-- However, you can set the flags anyway you like:
+- However, you can set the flags to anything you like:
 ```go
-    // The time limit is 60 seconds and the data source is set as
-    // "another.csv" file from the directory at which the command was run
-    // It is run on an Apple Silicon mac (M-series chips)
+    // Here, the time limit is 60 seconds and the file path
+    // is set as "another.csv" from the same directory.
+    // It will be run on an M-series CPU mac (M1, M2, chips)
     $ ./bin/apple-silicon-mac -timelimit 60 -path another.csv
 ```
